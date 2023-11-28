@@ -38,7 +38,6 @@ public class Trigger : MonoBehaviour
     {
         _srcObject = gameObject;
         _srcTransform = GetComponent<Transform>();
-        _srcObject.GetComponent<Collider>().isTrigger = true;
 
         _trigger = GameObject.Find("Sword");
         _triggerTransform = _trigger.GetComponent<Transform>();
@@ -53,5 +52,6 @@ public class Trigger : MonoBehaviour
     void Update()
     {
         Animation();
+
     }
 }
