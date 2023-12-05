@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -102,6 +103,7 @@ public class DrawRay : MonoBehaviour
         {
             //modifyHitRendererColor(Color.white);
             getHitObject();
+            DestroyIngredient();
             //modifyHitRendererColor(Color.red);
             //_isDebugRayVisible = !_isDebugRayVisible;
         }
@@ -118,5 +120,12 @@ public class DrawRay : MonoBehaviour
     private void OnApplicationQuit()
     {
         Destroy(_sourceLR);
+    }
+
+    private void DestroyIngredient()
+    {
+        if (_hitObject.tag == "Ingredient"){
+            Destroy(_hitObject);
+        }
     }
 }
