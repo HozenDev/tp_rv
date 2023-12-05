@@ -100,14 +100,14 @@ public class DrawRay : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            modifyHitRendererColor(Color.white);
+            //modifyHitRendererColor(Color.white);
             getHitObject();
-            modifyHitRendererColor(Color.red);
+            //modifyHitRendererColor(Color.red);
             //_isDebugRayVisible = !_isDebugRayVisible;
         }
         if (Input.GetMouseButtonDown(1))
         {  
-            modifyHitRendererColor(Color.white);
+            //modifyHitRendererColor(Color.white);
             removeHitObject();
         }
         DrawDebugHitRay();
