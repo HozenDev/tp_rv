@@ -7,14 +7,18 @@ public class Trigger : MonoBehaviour
     private Transform _backupTransform; // get source parent transform before trigger
     private Transform _srcTransform;
     private GameObject _srcObject;
+    private Rigidbody _srcRigidBody;
 
     public GameObject _trigger;
     private Transform _triggerTransform;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered");
-        _srcTransform.parent = _triggerTransform;
+        if (other.gameObject.name == "Sword") { 
+            Debug.Log("Trigger entered");
+            _srcTransform.parent = _triggerTransform;
+            _srcRigidBody.isKinematic = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -24,8 +28,12 @@ public class Trigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Trigger exited");
-        _srcTransform.parent = _backupTransform;
+        if (other.gameObject.name == "Sword")
+        {
+            Debug.Log("Trigger exited");
+            _srcTransform.parent = _backupTransform;
+            _srcRigidBody.isKinematic = false;
+        }
     }
 
     private void Animation()
@@ -38,6 +46,7 @@ public class Trigger : MonoBehaviour
     {
         _srcObject = gameObject;
         _srcTransform = GetComponent<Transform>();
+        _srcRigidBody = GetComponent<Rigidbody>();
 
         _trigger = GameObject.Find("Sword");
         _triggerTransform = _trigger.GetComponent<Transform>();
