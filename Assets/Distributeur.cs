@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class Distributeur : MonoBehaviour
@@ -12,10 +14,35 @@ public class Distributeur : MonoBehaviour
     public GameObject _painBas;
     public GameObject _painHaut;
     private Transform _ApparitionPoint;
+    public GameObject [] _ingredient;
 
-    public void Generate(GameObject obj)
+    private void Generate(GameObject obj)
     {
         Instantiate(obj, _ApparitionPoint);
+    }
+    public void GenerateFromage()
+    {
+        Instantiate(_fromage, _ApparitionPoint);
+    }
+    public void GenerateTomate()
+    {
+        Instantiate(_tomate, _ApparitionPoint);
+    }
+    public void GenerateSalade()
+    {
+        Instantiate(_salade, _ApparitionPoint);
+    }
+    public void GenerateSteak()
+    {
+        Instantiate(_steak, _ApparitionPoint);
+    }
+    public void GeneratePainBas()
+    {
+        Instantiate(_painBas, _ApparitionPoint);
+    }
+    public void GeneratePainHaut()
+    {
+        Instantiate(_painHaut, _ApparitionPoint);
     }
 
     // Start is called before the first frame update
