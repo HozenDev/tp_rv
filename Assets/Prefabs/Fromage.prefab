@@ -13,11 +13,7 @@ GameObject:
   - component: {fileID: 8535648114542819140}
   - component: {fileID: 5643563193648356808}
   - component: {fileID: -794403883511253077}
-<<<<<<< HEAD
   - component: {fileID: 5242935451047241496}
-=======
-  - component: {fileID: 6511392115718254701}
->>>>>>> 0b2a6d912ff93cd41fc64cb2502560199035a68a
   m_Layer: 0
   m_Name: Fromage
   m_TagString: Ingredient
