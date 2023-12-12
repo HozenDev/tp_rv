@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1000286494719632982}
   - component: {fileID: 3558591735261078679}
   - component: {fileID: -3354404789215456433}
+  - component: {fileID: -5208717490305371910}
   m_Layer: 0
   m_Name: PainBas
   m_TagString: Ingredient
@@ -148,3 +149,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trigger: {fileID: 0}
+--- !u!65 &-5208717490305371910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369826505149541647}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6452745, y: 0.0747341, z: 0.6452745}
+  m_Center: {x: 0, y: 0.04, z: 0}
