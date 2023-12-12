@@ -11,29 +11,41 @@ public class Trigger : MonoBehaviour
 
     public GameObject _trigger;
     private Transform _triggerTransform;
+    private bool _isBound;
+    private bool _spacePressed;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Sword") { 
-            Debug.Log("Trigger entered");
-            _srcTransform.parent = _triggerTransform;
-            _srcRigidBody.isKinematic = true;
-        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        // to do
+        Debug.Log("deb");
+        if (other.gameObject.name == "Sword" && Input.GetKey("space") && !_spacePressed)
+        {
+            _spacePressed = true;
+            Debug.Log("in");
+            if (!_isBound)
+            {
+                _srcTransform.SetParent(_triggerTransform,true);
+                _srcRigidBody.isKinematic = true;
+                _isBound = true;
+            }
+            else
+            {
+                _srcTransform.SetParent(_backupTransform,true);
+                _srcRigidBody.isKinematic = false;
+                _isBound = false;
+            }
+        }
+        else if (!Input.GetKey("space"))
+        {
+            _spacePressed=false;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Sword")
-        {
-            Debug.Log("Trigger exited");
-            _srcTransform.parent = _backupTransform;
-            _srcRigidBody.isKinematic = false;
-        }
     }
 
     private void Animation()
@@ -51,7 +63,10 @@ public class Trigger : MonoBehaviour
         _trigger = GameObject.Find("Sword");
         _triggerTransform = _trigger.GetComponent<Transform>();
 
-        _backupTransform = _srcTransform;
+        _backupTransform = GetComponent<Transform>().parent;
+
+        _isBound = false;
+        _spacePressed = false;
 
         Debug.Log(_srcObject);
         Debug.Log(_trigger);
