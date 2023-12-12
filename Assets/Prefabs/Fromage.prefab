@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8535648114542819140}
   - component: {fileID: 5643563193648356808}
   - component: {fileID: -794403883511253077}
-  - component: {fileID: 6511392115718254701}
+  - component: {fileID: 5242935451047241496}
   m_Layer: 0
   m_Name: Fromage
   m_TagString: Ingredient
@@ -105,7 +105,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -73344568773205406, guid: 196e0af9fb874425692d30ad465b1097, type: 3}
 --- !u!54 &-794403883511253077
@@ -133,18 +133,25 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &6511392115718254701
-MonoBehaviour:
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7887011090513598097}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcd9a17ce96ca149a92f70e06cf42d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _trigger: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.7138134, y: 0.02, z: 0.71543896}
+  m_Center: {x: -0.004888192, y: 0.03, z: 0.000000029802322}
