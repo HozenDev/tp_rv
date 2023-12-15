@@ -33,7 +33,7 @@ public class Recipe
         foreach (Ingredient i in _listOfingredients)
         {
             s += i.ToString();
-            s += " ";
+            s += "\n";
         }
 
         return s;

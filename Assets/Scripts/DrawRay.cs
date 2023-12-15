@@ -74,11 +74,11 @@ public class DrawRay : MonoBehaviour
         _isDebugRayVisible = true;
 
         // get source object
-        _sourceObject = GameObject.Find("Sword");
+        _sourceObject = gameObject;
 
         // get source transform
         _sourceTransform = GetComponent<Transform>();
-        _forwardDirection = _sourceTransform.up;
+        _forwardDirection = _sourceTransform.forward;
 
         // get source renderer
         _sourceRenderer = GetComponent<Renderer>();
@@ -97,7 +97,7 @@ public class DrawRay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _forwardDirection = _sourceTransform.up;
+        _forwardDirection = _sourceTransform.forward;
 
         if (Input.GetMouseButtonDown(0))
         {

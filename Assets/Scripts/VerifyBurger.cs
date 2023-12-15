@@ -10,6 +10,7 @@ public class VerifyBurger : MonoBehaviour
     
     GameObject _recipeDisplayer;
     Transform _recipeDisplayerTransform;
+    Text _recipeText;
 
     void ComputeRandomRecipe()
     {
@@ -39,6 +40,9 @@ public class VerifyBurger : MonoBehaviour
         // Creation canva
         _recipeDisplayer = GameObject.Find("EcranRecette");
         _recipeDisplayerTransform = _recipeDisplayer.GetComponent<Transform>();
+        _recipeText = _recipeDisplayer.GetComponent<Text>();
+
+        _recipeText.text = recipe.ToString();
     }
 
     // Update is called once per frame
