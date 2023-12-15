@@ -2,25 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ingredient
+public class Ingredient : MonoBehaviour
 {
-    private int _numberOfTypes = 6;
-    private Type type;
+    public static int _numberOfTypes = 6;
+    public Type type;
 
     public enum Type
     {
         PAINB = 0, PAINH, SALADE, STEAK, TOMATE, FROMAGE
     };
-
-    public Ingredient()
-    {
-        type = (Type) Random.Range(2, _numberOfTypes-1);
-    }
-
-    public Ingredient(Type type)
-    {
-        this.type = type;
-    }
 
     override
     public string ToString()
@@ -58,6 +48,11 @@ public class Ingredient
     public Type getType()
     {
         return type;
+    }
+
+    public void setType(Type ptype)
+    {
+        type = ptype;
     }
 
 }

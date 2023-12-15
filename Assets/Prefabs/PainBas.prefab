@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3558591735261078679}
   - component: {fileID: -3354404789215456433}
   - component: {fileID: 7277896809329103252}
+  - component: {fileID: -1900390322434148909}
   m_Layer: 0
   m_Name: PainBas
   m_TagString: Ingredient
@@ -147,3 +148,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6452745, y: 0.0747341, z: 0.6452745}
   m_Center: {x: 0.0033062845, y: 0.037357148, z: 0.0031430125}
+--- !u!114 &-1900390322434148909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369826505149541647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4ede7a3c73bf442a3169916d144392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
