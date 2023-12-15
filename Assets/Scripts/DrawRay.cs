@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrawRay : MonoBehaviour
 {
@@ -90,7 +91,7 @@ public class DrawRay : MonoBehaviour
         _sourceLR.startColor = Color.green;
         _sourceLR.endColor = Color.blue;
 
-        //getHitObject();
+        getHitObject();
         //DrawDebugHitRay();
     }
 
@@ -104,6 +105,7 @@ public class DrawRay : MonoBehaviour
             //modifyHitRendererColor(Color.white);
             getHitObject();
             DestroyIngredient();
+            ButtonActivate();
             //modifyHitRendererColor(Color.red);
             //_isDebugRayVisible = !_isDebugRayVisible;
         }
@@ -113,7 +115,7 @@ public class DrawRay : MonoBehaviour
             removeHitObject();
         }
         DrawDebugHitRay();
-        DrawLine();
+        //DrawLine();
         
     }
 
@@ -126,6 +128,14 @@ public class DrawRay : MonoBehaviour
     {
         if (_hitObject.tag == "Ingredient"){
             Destroy(_hitObject);
+        }
+    }
+
+    private void ButtonActivate()
+    {
+        if (_hitObject.tag == "Button")
+        {
+            _hitObject.GetComponent<Button>().onClick.Invoke();
         }
     }
 }

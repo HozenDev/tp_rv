@@ -360,9 +360,10 @@ GameObject:
   - component: {fileID: 7248964076499873329}
   - component: {fileID: 5562094984441239121}
   - component: {fileID: 7340677516832890851}
+  - component: {fileID: 2310124506152642467}
   m_Layer: 5
   m_Name: ButtonFromage (Legacy) (6)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,6 +482,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &2310124506152642467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544377195740551150}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 30, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2036706890303781825
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,8 +612,8 @@ Transform:
   m_GameObject: {fileID: 2294715657409384436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.257, y: -0.474, z: 0}
-  m_LocalScale: {x: 0.5, y: 2, z: 1}
+  m_LocalPosition: {x: 0.257, y: -0.663, z: 0}
+  m_LocalScale: {x: 0.5, y: 2.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7851430078648045407}
@@ -679,9 +701,10 @@ GameObject:
   - component: {fileID: 758151284074188468}
   - component: {fileID: 4145348137442056688}
   - component: {fileID: 2584801017683799605}
+  - component: {fileID: 9168451064088746025}
   m_Layer: 5
   m_Name: ButtonSteak (Legacy) (3)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,6 +823,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &9168451064088746025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422460031139523651}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 30, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3096920980912874895
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,9 +1014,10 @@ GameObject:
   - component: {fileID: 6364366775624458479}
   - component: {fileID: 8292781221082077102}
   - component: {fileID: 3211842806067182822}
+  - component: {fileID: 7649762276180564635}
   m_Layer: 5
   m_Name: ButtonSalade (Legacy) (2)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1091,6 +1136,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &7649762276180564635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440818318304788792}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 30, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4534406276810922036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,9 +1169,10 @@ GameObject:
   - component: {fileID: 1963991016255473736}
   - component: {fileID: 582604761308043470}
   - component: {fileID: 152330720862507768}
+  - component: {fileID: 5846428065761950660}
   m_Layer: 5
   m_Name: ButtonPainHaut (Legacy) (5)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1224,6 +1291,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &5846428065761950660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534406276810922036}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 30, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5819650070654562352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,9 +1405,10 @@ GameObject:
   - component: {fileID: 1700632448510927972}
   - component: {fileID: 7521217584642680905}
   - component: {fileID: 1345834530301450090}
+  - component: {fileID: 1962852036524371329}
   m_Layer: 5
   m_Name: ButtonTomate (Legacy) (1)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1438,6 +1527,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &1962852036524371329
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6439249628790962613}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 30, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6465865201933202170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,9 +1560,10 @@ GameObject:
   - component: {fileID: 8211811780890658280}
   - component: {fileID: 4316601553910264084}
   - component: {fileID: 8157281347775910817}
+  - component: {fileID: 3374824361407751779}
   m_Layer: 5
   m_Name: ButtonPainBas (Legacy) (4)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1465,7 +1576,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6465865201933202170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.042}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1571,6 +1682,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &3374824361407751779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465865201933202170}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 30, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6585295119440612613
 GameObject:
   m_ObjectHideFlags: 0
