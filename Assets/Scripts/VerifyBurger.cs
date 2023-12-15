@@ -27,6 +27,12 @@ public class VerifyBurger : MonoBehaviour
         // get all ingredients game objects
         // compare to the recipe
         // treatment
+
+        Ingredient[] listOfIngredient = GetComponentsInChildren<Ingredient>();
+        foreach (Ingredient i in listOfIngredient)
+        {
+            // i.DoSomething();
+        }
     }
 
     // Start is called before the first frame update
