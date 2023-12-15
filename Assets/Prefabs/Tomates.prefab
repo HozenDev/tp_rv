@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4255431408899297839}
   - component: {fileID: 1477994123756131138}
   - component: {fileID: 2633744516255028590}
+  - component: {fileID: -7535701537968647221}
   m_Layer: 0
   m_Name: Tomates
   m_TagString: Ingredient
@@ -148,3 +149,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trigger: {fileID: 0}
+--- !u!114 &-7535701537968647221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741741109597149558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4ede7a3c73bf442a3169916d144392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4

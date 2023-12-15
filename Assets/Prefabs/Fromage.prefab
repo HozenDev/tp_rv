@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8535648114542819140}
   - component: {fileID: -794403883511253077}
   - component: {fileID: 7202156728794181962}
+  - component: {fileID: 8735273301926149349}
   m_Layer: 0
   m_Name: Fromage
   m_TagString: Ingredient
@@ -133,3 +134,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7138134, y: 0.03, z: 0.71543896}
   m_Center: {x: -0.004888192, y: 0.02, z: 0.000000029802322}
+--- !u!114 &8735273301926149349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7887011090513598097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4ede7a3c73bf442a3169916d144392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5

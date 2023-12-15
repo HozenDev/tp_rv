@@ -11,18 +11,35 @@ public class Recipe
         return _listOfingredients;
     }
 
-    public void RandomRecipe(int n)
+    public Recipe(int n)
     {
         _listOfingredients = new List<Ingredient>(n);
-        _listOfingredients.Add(new Ingredient(Ingredient.Type.PAINB));
+    }
+
+    public void RandomRecipe(int n)
+    {
+        Ingredient item = GameObject.Find("Verifier").AddComponent(typeof(Ingredient)) as Ingredient;
+        item.setType(Ingredient.Type.PAINB);
+
+        _listOfingredients = new List<Ingredient>(n);
+        _listOfingredients.Add(item);
 
         for (int i = 0; i < n; i++)
         {
-            Ingredient item = new Ingredient();
+            item = GameObject.Find("Verifier").AddComponent(typeof(Ingredient)) as Ingredient;
+            item.setType((Ingredient.Type) Random.Range(2, Ingredient._numberOfTypes - 1));
             _listOfingredients.Add(item);
         }
 
-        _listOfingredients.Add(new Ingredient(Ingredient.Type.PAINH));
+        item = GameObject.Find("Verifier").AddComponent(typeof(Ingredient)) as Ingredient;
+        item.setType(Ingredient.Type.PAINH);
+
+        _listOfingredients.Add(item);
+    }
+
+    public void AddIngredient(Ingredient i)
+    {
+        _listOfingredients.Add(i);
     }
 
     override

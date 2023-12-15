@@ -8,9 +8,9 @@ public class VerifyBurger : MonoBehaviour
     private Recipe recipe;
     public int _numberOfIngredients = 6;
     
-    GameObject _recipeDisplayer;
-    Transform _recipeDisplayerTransform;
-    Text _recipeText;
+    public GameObject _recipeDisplayer;
+    public Transform _recipeDisplayerTransform;
+    public Text _recipeText;
 
     void ComputeRandomRecipe()
     {
@@ -22,17 +22,24 @@ public class VerifyBurger : MonoBehaviour
         Debug.Log(recipe);
     }
 
-    void VerifyRecipe()
+    public void VerifyRecipe()
     {
         // get all ingredients game objects
         // compare to the recipe
         // treatment
+        Ingredient[] listOfIngredient = GameObject.Find("ApparitionPoint").GetComponentsInChildren<Ingredient>();
 
-        Ingredient[] listOfIngredient = GetComponentsInChildren<Ingredient>();
+        Recipe r = new Recipe(listOfIngredient.Length);
+
         foreach (Ingredient i in listOfIngredient)
         {
-            // i.DoSomething();
+            r.AddIngredient(i);
+            Debug.Log(i.ToString());
         }
+
+        Debug.Log(r.ToString());
+        Debug.Log(recipe.ToString());
+        Debug.Log(recipe.ToString() == r.ToString());
     }
 
     // Start is called before the first frame update
