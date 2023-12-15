@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 2706619355463038901}
   - component: {fileID: 1306057515282020368}
   - component: {fileID: 3874497737329069274}
-  - component: {fileID: 1000286494719632982}
   - component: {fileID: 3558591735261078679}
   - component: {fileID: -3354404789215456433}
-  - component: {fileID: -5208717490305371910}
+  - component: {fileID: 7277896809329103252}
   m_Layer: 0
   m_Name: PainBas
   m_TagString: Ingredient
@@ -87,28 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1000286494719632982
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3369826505149541647}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8254770541914449303, guid: 31cbb32a31a7c49b49f5bc0be273c8f6, type: 3}
 --- !u!54 &3558591735261078679
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trigger: {fileID: 0}
---- !u!65 &-5208717490305371910
+--- !u!65 &7277896809329103252
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,4 +146,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.6452745, y: 0.0747341, z: 0.6452745}
-  m_Center: {x: 0, y: 0.04, z: 0}
+  m_Center: {x: 0.0033062845, y: 0.037357148, z: 0.0031430125}

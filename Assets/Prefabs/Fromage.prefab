@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5877270036004881294}
   - component: {fileID: 8535648114542819140}
   - component: {fileID: -794403883511253077}
-  - component: {fileID: 1023080460850829271}
+  - component: {fileID: 7202156728794181962}
   m_Layer: 0
   m_Name: Fromage
   m_TagString: Ingredient
@@ -112,7 +112,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!65 &1023080460850829271
+--- !u!65 &7202156728794181962
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,5 +131,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.02, z: 0.5}
-  m_Center: {x: 0, y: 0.02, z: 0}
+  m_Size: {x: 0.7138134, y: 0.03, z: 0.71543896}
+  m_Center: {x: -0.004888192, y: 0.02, z: 0.000000029802322}

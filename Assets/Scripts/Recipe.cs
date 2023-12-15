@@ -2,24 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Recipe : MonoBehaviour
+public class Recipe
 {
-    List<Ingredient> _listOfingredients;
+    private List<Ingredient> _listOfingredients;
 
-    void RandomRecipe()
+    public List<Ingredient> GetRecipe()
     {
-        // todo
+        return _listOfingredients;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void RandomRecipe(int n)
     {
-        
+        _listOfingredients = new List<Ingredient>(n);
+        _listOfingredients.Add(new Ingredient(Ingredient.Type.PAINB));
+
+        for (int i = 0; i < n; i++)
+        {
+            Ingredient item = new Ingredient();
+            _listOfingredients.Add(item);
+        }
+
+        _listOfingredients.Add(new Ingredient(Ingredient.Type.PAINH));
     }
 
-    // Update is called once per frame
-    void Update()
+    override
+    public string ToString()
     {
-        
+        string s = "";
+
+        foreach (Ingredient i in _listOfingredients)
+        {
+            s += i.ToString();
+            s += "\n";
+        }
+
+        return s;
+    }
+
+    public Recipe()
+    {
+        // do nothing
     }
 }
