@@ -48,7 +48,7 @@ public class Trigger : MonoBehaviour
         _srcTransform = GetComponent<Transform>();
         _srcRigidBody = GetComponent<Rigidbody>();
 
-        _trigger = GameObject.Find("Sword");
+        _trigger = GameObject.Find("HisuKnife");
         _triggerTransform = _trigger.GetComponent<Transform>();
 
         _backupTransform = _srcTransform;

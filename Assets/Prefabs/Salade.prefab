@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8628432229483722132}
   - component: {fileID: 5217598068768068800}
   - component: {fileID: -6907401793450049381}
+  - component: {fileID: 2901787238490670650}
   m_Layer: 0
   m_Name: Salade
   m_TagString: Ingredient
@@ -106,7 +107,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -2830641319720067450, guid: 65cdedb23963c4677b850f27bc64f883, type: 3}
 --- !u!54 &5217598068768068800
 Rigidbody:
@@ -116,7 +117,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6096718840839323341}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -148,3 +149,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trigger: {fileID: 0}
+--- !u!65 &2901787238490670650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096718840839323341}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.05, z: 0.7}
+  m_Center: {x: 0, y: 0.02, z: 0}
