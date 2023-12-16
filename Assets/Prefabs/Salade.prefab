@@ -118,9 +118,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6096718840839323341}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 100
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -136,7 +136,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-6907401793450049381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.7, y: 0.05, z: 0.7}
+  m_Size: {x: 0.7, y: 0.07, z: 0.7}
   m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!114 &3250026234766371877
 MonoBehaviour:

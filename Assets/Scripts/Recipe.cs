@@ -27,7 +27,7 @@ public class Recipe
         for (int i = 0; i < n; i++)
         {
             item = GameObject.Find("Verifier").AddComponent(typeof(Ingredient)) as Ingredient;
-            item.setType((Ingredient.Type) Random.Range(2, Ingredient._numberOfTypes - 1));
+            item.setType((Ingredient.Type) Random.Range(2, Ingredient._numberOfTypes));
             _listOfingredients.Add(item);
         }
 
