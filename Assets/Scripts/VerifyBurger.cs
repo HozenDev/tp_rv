@@ -6,6 +6,7 @@ using UnityEngine;
 public class VerifyBurger : MonoBehaviour
 {
     private Recipe recipe;
+	[Range(1,15)]
     public int _numberOfIngredients = 6;
     public float _generationSpeed = 0.1f;
     
@@ -22,6 +23,10 @@ public class VerifyBurger : MonoBehaviour
 
     public GameObject _invisibleCollider;
 
+	public GameObject _apparitionPoint;
+	public GameObject _recipeBurger;
+	public Text _textNbIngredient;
+
     void ComputeRandomRecipe()
     {
         recipe.RandomRecipe(_numberOfIngredients);
@@ -34,7 +39,7 @@ public class VerifyBurger : MonoBehaviour
 
     private IEnumerator CreateBurger()
     {
-	GameObject burger = GameObject.Find("RecipeBurger");
+	GameObject burger = _recipeBurger;
 	Transform burgerTransform = burger.GetComponent<Transform>();
 
 	List<Ingredient> _listOfIngredients = recipe.GetRecipe();
@@ -83,8 +88,7 @@ public class VerifyBurger : MonoBehaviour
         // get all ingredients game objects
         // compare to the recipe
         // treatment
-	GameObject apparitionPoint = GameObject.Find("ApparitionPoint");
-        Ingredient[] listOfIngredient = apparitionPoint.GetComponentsInChildren<Ingredient>();
+        Ingredient[] listOfIngredient = _apparitionPoint.GetComponentsInChildren<Ingredient>();
 
         Recipe r = new Recipe(listOfIngredient.Length);
 
@@ -102,12 +106,12 @@ public class VerifyBurger : MonoBehaviour
 	{
 	    // good recipe
 	    StartCoroutine(LightVerification(Color.green));
-	    DestroyBurger(apparitionPoint);
+	    DestroyBurger(_apparitionPoint);
 	    RemoveRecipeComponent();
-	    DestroyBurger(GameObject.Find("RecipeBurger"));
+	    DestroyBurger(_recipeBurger);
 	    ComputeRandomRecipe();
 	    StartCoroutine(CreateBurger());
-	    Score.Update(1);
+	    Score.Update(_numberOfIngredients);
 	}
 	else
 	{
@@ -152,8 +156,13 @@ public class VerifyBurger : MonoBehaviour
     {
         // Creation Recette
         recipe = new Recipe();
+		_apparitionPoint = GameObject.Find("ApparitionPoint");
+		_recipeBurger = GameObject.Find("RecipeBurger");
+		_textNbIngredient = GameObject.Find("TextNbIngredient").GetComponent<Text>();
+		_textNbIngredient.text = _numberOfIngredients.ToString();
+
         ComputeRandomRecipe();
-	StartCoroutine(CreateBurger());
+		StartCoroutine(CreateBurger());
         afficher();
 
         // Creation canva
@@ -163,6 +172,28 @@ public class VerifyBurger : MonoBehaviour
 
         _recipeText.text = recipe.ToString();
     }
+
+	public void ResetRecipe(){
+	    DestroyBurger(_apparitionPoint);
+	    RemoveRecipeComponent();
+	    DestroyBurger(_recipeBurger);
+	    ComputeRandomRecipe();
+	    StartCoroutine(CreateBurger());
+	}
+
+	public void AddIngredient(){
+		if (_numberOfIngredients<15){
+			_numberOfIngredients++;
+			_textNbIngredient.text = _numberOfIngredients.ToString();
+			}
+	}
+
+	public void RemoveIngredient(){
+		if (_numberOfIngredients>1){
+			_numberOfIngredients--;
+			_textNbIngredient.text = _numberOfIngredients.ToString();
+			}
+	}
 
     // Update is called once per frame
     void Update()
