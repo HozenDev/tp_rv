@@ -84,12 +84,12 @@ public class DrawRay : MonoBehaviour
         // get source renderer
         _sourceRenderer = GetComponent<Renderer>();
 
-        _sourceLR = _sourceObject.AddComponent(typeof(LineRenderer)) as LineRenderer;
-        _sourceLR.startWidth = 0f;
-        _sourceLR.endWidth = 0.4f;
-        _sourceLR.material = new Material(Shader.Find("Sprites/Default"));
-        _sourceLR.startColor = Color.green;
-        _sourceLR.endColor = Color.blue;
+        // _sourceLR = _sourceObject.AddComponent(typeof(LineRenderer)) as LineRenderer;
+        // _sourceLR.startWidth = 0f;
+        // _sourceLR.endWidth = 0.4f;
+        // _sourceLR.material = new Material(Shader.Find("Sprites/Default"));
+        // _sourceLR.startColor = Color.green;
+        // _sourceLR.endColor = Color.blue;
 
         getHitObject();
         //DrawDebugHitRay();

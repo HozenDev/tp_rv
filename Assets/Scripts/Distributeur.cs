@@ -13,7 +13,10 @@ public class Distributeur : MonoBehaviour
     public GameObject _steak;
     public GameObject _painBas;
     public GameObject _painHaut;
+
     private Transform _ApparitionPoint;
+    public GameObject _BurgerContainer;
+
     public GameObject [] _ingredient;
 
     private void Generate(GameObject obj)
@@ -50,8 +53,16 @@ public class Distributeur : MonoBehaviour
     {
         _myTF = GetComponent<Transform>();
         print(_myTF.childCount);
-        _ApparitionPoint = _myTF.GetChild(0);
+        _ApparitionPoint = _myTF.GetChild(0).GetComponent<Transform>().GetChild(0);
         // Generate(_fromage);
+    }
+
+    public void CreateBurgerContainer()
+    {
+	Transform apparitionPoint = GetComponent<Transform>().GetChild(0).GetComponent<Transform>();
+	GameObject newBC = (GameObject) Instantiate(_BurgerContainer, apparitionPoint);
+	newBC.name = "BurgerContainer";
+	_ApparitionPoint = newBC.GetComponent<Transform>();
     }
 
     // Update is called once per frame

@@ -35,6 +35,9 @@ public class VerifyBurger : MonoBehaviour
     private IEnumerator CreateBurger()
     {
 	GameObject burger = GameObject.Find("RecipeBurger");
+
+	GameObject.Find("Distributeur").GetComponent<Distributeur>().CreateBurgerContainer();
+	
 	Transform burgerTransform = burger.GetComponent<Transform>();
 
 	List<Ingredient> _listOfIngredients = recipe.GetRecipe();
@@ -101,17 +104,49 @@ public class VerifyBurger : MonoBehaviour
 	if (recipe.ToString() == r.ToString())
 	{
 	    // good recipe
-	    StartCoroutine(LightVerification(Color.green));
-	    DestroyBurger(apparitionPoint);
-	    RemoveRecipeComponent();
-	    DestroyBurger(GameObject.Find("RecipeBurger"));
-	    ComputeRandomRecipe();
-	    StartCoroutine(CreateBurger());
-	    Score.Update(1);
+	    StartCoroutine(Win());
 	}
 	else
 	{
-	    StartCoroutine(LightVerification(Color.red));
+	    StartCoroutine(Lose());
+	}
+    }
+
+    IEnumerator Win()
+    {
+	Transform burger = GameObject.Find("BurgerContainer").GetComponent<Transform>();
+
+	for (int i = 0; i < 100; i++)
+	{
+	    burger.Translate(Vector3.forward * Time.deltaTime);
+	    yield return new WaitForSeconds (0.01f);
+	}
+
+	StartCoroutine(LightVerification(Color.green));
+	DestroyBurger(GameObject.Find("ApparitionPoint"));
+	RemoveRecipeComponent();
+	DestroyBurger(GameObject.Find("RecipeBurger"));
+	ComputeRandomRecipe();
+	StartCoroutine(CreateBurger());
+	Score.Update(1);
+    }
+
+    IEnumerator Lose()
+    {
+	Transform burger = GameObject.Find("BurgerContainer").GetComponent<Transform>();
+
+	for (int i = 0; i < 100; i++)
+	{
+	    burger.Translate(Vector3.forward * Time.deltaTime);
+	    yield return new WaitForSeconds (0.01f);
+	}
+	
+	StartCoroutine(LightVerification(Color.red));
+
+	for (int i = 0; i < 100; i++)
+	{
+	    burger.Translate(-Vector3.forward * Time.deltaTime);
+	    yield return new WaitForSeconds (0.01f);
 	}
     }
 
