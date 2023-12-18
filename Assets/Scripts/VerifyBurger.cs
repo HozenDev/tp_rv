@@ -126,9 +126,12 @@ public class VerifyBurger : MonoBehaviour
     {
 	Transform burger = GameObject.Find("BurgerContainer").GetComponent<Transform>();
 
-	for (int i = 0; i < 100; i++)
+	float dist = 0;
+	Vector3 pos = burger.position;
+	while (dist<1.7)
 	{
-	    burger.Translate(Vector3.forward * Time.deltaTime);
+	    burger.Translate(Vector3.forward * Time.deltaTime*2);
+		dist +=Time.deltaTime*2;
 	    yield return new WaitForSeconds (0.01f);
 	}
 
@@ -144,20 +147,25 @@ public class VerifyBurger : MonoBehaviour
     IEnumerator Lose()
     {
 	Transform burger = GameObject.Find("BurgerContainer").GetComponent<Transform>();
-
-	for (int i = 0; i < 100; i++)
+	float dist = 0;
+	Vector3 pos = burger.position;
+	while (dist<1.7)
 	{
-	    burger.Translate(Vector3.forward * Time.deltaTime);
+	    burger.Translate(Vector3.forward * Time.deltaTime*2);
+		dist +=Time.deltaTime*2;
 	    yield return new WaitForSeconds (0.01f);
 	}
 	
 	StartCoroutine(LightVerification(Color.red));
 
-	for (int i = 0; i < 100; i++)
+	dist = 0;
+	while (dist<1.7)
 	{
-	    burger.Translate(-Vector3.forward * Time.deltaTime);
+	    burger.Translate(-Vector3.forward * Time.deltaTime*2);
+		dist +=Time.deltaTime*2;
 	    yield return new WaitForSeconds (0.01f);
 	}
+	burger.position = pos;
     }
 
     void DestroyBurger(GameObject parent)
