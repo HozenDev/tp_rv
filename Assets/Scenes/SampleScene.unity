@@ -1046,6 +1046,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5225327923193636671, guid: acd069bbdad85b24ba0e954d09b1ad00, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5353251204684837859, guid: acd069bbdad85b24ba0e954d09b1ad00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.66
@@ -1090,10 +1094,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human
       objectReference: {fileID: 0}
+    - target: {fileID: 9065646247761979836, guid: acd069bbdad85b24ba0e954d09b1ad00, type: 3}
+      propertyPath: m_Name
+      value: HisuKnifeprefab
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9065646247762149446, guid: acd069bbdad85b24ba0e954d09b1ad00, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1844382571}
   m_SourcePrefab: {fileID: 100100000, guid: acd069bbdad85b24ba0e954d09b1ad00, type: 3}
 --- !u!1 &1655186620
 GameObject:
@@ -1206,6 +1217,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828473338}
   m_CullTransparentMesh: 1
+--- !u!1 &1844382565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9065646247762149446, guid: acd069bbdad85b24ba0e954d09b1ad00, type: 3}
+  m_PrefabInstance: {fileID: 1549264682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1844382571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844382565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8897df84d705ee4792d26a9ba129036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1916054024
 GameObject:
   m_ObjectHideFlags: 0
