@@ -6,7 +6,7 @@ using UnityEngine;
 public class VerifyBurger : MonoBehaviour
 {
     private Recipe recipe;
-	[Range(1,15)]
+    [Range(1,15)]
     public int _numberOfIngredients = 6;
     public float _generationSpeed = 0.1f;
     

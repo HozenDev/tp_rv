@@ -34,7 +34,7 @@ public class DrawRay : MonoBehaviour
     {
         if (_hitObject != null && _isDebugRayVisible)
         {
-            Debug.DrawRay(_sourceTransform.position, _sourceTransform.TransformDirection(_forwardDirection * _hit.distance), Color.red);
+            Debug.DrawRay(_sourceTransform.position, _forwardDirection * _hit.distance, Color.red);
         }
     }
 
