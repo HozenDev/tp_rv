@@ -126,16 +126,22 @@ public class DrawRay : MonoBehaviour
 
     private void DestroyIngredient()
     {
-        if (_hitObject.tag == "Ingredient"){
+        if (_hitObject!=null && _hitObject.tag == "Ingredient"){
             Destroy(_hitObject);
+            _hitObject = null;
+            _hitTransform = null;
+            _hitRenderer = null;
         }
     }
 
     private void ButtonActivate()
     {
-        if (_hitObject.tag == "Button")
+        if (_hitObject!=null && _hitObject.tag == "Button")
         {
             _hitObject.GetComponent<Button>().onClick.Invoke();
+            _hitObject = null;
+            _hitTransform = null;
+            _hitRenderer = null;
         }
     }
 }
